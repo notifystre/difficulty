@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "notifystre-difficulty"
+version = "0.1.0"
+description = "依据历史通过率与推理步数把样本分层，标出区分度不足的题目"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "notifystre" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://notifystre.github.io"
+Repository = "https://github.com/notifystre/difficulty"
+Issues = "https://github.com/notifystre/difficulty/issues"
+
+[project.scripts]
+difficulty = "difficulty:main"
+
+[tool.setuptools]
+py-modules = ["difficulty"]
